@@ -1,15 +1,35 @@
+body { 
+    padding-top: 0px; 
+    font-size: 17px;
+    width: 100%;
+}
 
-.navbar-inverse {
+.row {
+    width: 100%;
+}
+
+.navbar {
     background-color: #f5f5f5;
     border-color: #e0e0e0;
     color: black;
+    width:100%;
 }
 
-.navbar-form {
-    border-color: #e0e0e0;
-    border-bottom-width: 0px;
-    border-top-width: 0px;
-    border-bottom-style: solid;
+.navbar-nav>li.login {
+    width: 100px;
+    float: right;
+    
+}
+
+.navbar-nav>li.reg {
+    width: 215px;
+    float: left;
+    
+}
+
+.marg {
+    margin-top: 15px;
+    margin-left: 10px;
 }
 
 .btn-default {
@@ -18,22 +38,129 @@
     color: black;
 }
 
-.btn-default:active {
+.btn-default:active, .btn-default:hover, .btn-default:focus:active, .btn-default.highlight:hover   {
     background-color: #e0e0e0;
     border-color: #d0d0d0;
 }
 
-.btn-default:hover {
+.btn-primary:active, .btn-primary:hover, .btn-primary:focus:active, .btn-primary.highlight:hover, .btn-primary  {
     background-color: #e0e0e0;
     border-color: #d0d0d0;
+    color: black;
+    border-radius: 25px;
 }
 
-.btn-default:focus:active  {
-    background-color: #e0e0e0;
-    border-color: #d0d0d0;
+/* body  */
+
+.logo {
+    margin-left: 15px;
+    font-size: 300%;
 }
 
-.btn-default.highlight:hover {
-    background-color: #e0e0e0;
-    border-color: #d0d0d0;
+
+.center {
+    text-align: center;
 }
+
+top {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+bot {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+button.large, button.large:hover {
+	border-radius: 25px;
+	width: 50%;
+    height: 60px;
+}
+
+button.medium, button.medium:hover {
+    border-radius: 25px;
+
+}
+
+.bordered {
+    border: 1px solid black;
+}
+
+.limiter {
+    max-width: 90%;
+}
+
+.gray, a:link.gray {
+    color:darkgray; 
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+
+.comments {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+.padding-top {
+    padding-top: 20px;
+}
+
+/* PROFILE */
+
+.tabs-left>ul>li, .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    padding-right: 0;
+    background-color: #e0e0e0;
+    width: 100%;
+}
+
+.out-right {
+    padding-right: 0;
+}
+
+.out-left {
+    padding-left: 0;
+}
+
+/* CATALOG */
+
+.vert-center {
+    position: absolute;
+    top: 50%;
+}
+
+/* FOOTER */
+
+.field {
+    background-color: #f5f5f5;
+    color: black;
+}
+
+footer {
+    border: 0px;
+    border-top: 1px solid black;
+    
+}
+
+.left {
+     float: left;
+}
+.right {
+    float: right;
+}
+
+.col-xs-11>p {
+    padding: 10px 0px 20px 30px;
+    margin: 0;
+}
+

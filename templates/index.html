@@ -1,94 +1,127 @@
-<!DOCTYPE html>
-
-<html lang="ru">
-    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../static/other/favicon.ico">
-
-    <title>Библиотека</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-
-    <!-- Custom styles for this template -->
-    <link href="../static/css//starter-template.css" rel="stylesheet">
-    <link href="../static/css/style.css" rel="stylesheet">
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../static/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../static/js/ie-emulation-modes-warning.js"></script>
-    
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../static/js/3.7.3/html5shiv.min.js"></script>
-      <script src="../static/js/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">НовосибСтрой</a>
-          <a href="#">Вы из Новосибирска?</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <!--<ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul> -->
-            <form class="navbar-form navbar-right" action="#"> 
-            <button type="submit" class="btn btn-success">Зарегистрироваться</button>
-        </form>
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button class="btn btn-default"><a href="#"></a>Войти</button>
-        </form>
-
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
+{% extends "_base.html" %}
+{% block content %}
+{% include "_nav_unloginned.html" %}
+      
     <div class="container">
+        <div class="row">
+            <br>
+            <p>Участники в Новосибирске: <a href="catalog.html">105 оптовых компаний</a> и <a href="catalog.html">25 производителей</a></p>
+            <br>
+                <div class="col-xs-12 col-md-8 col-md-offset-2">
+                    <h1 class="page-name center">ВАМ ПОЗВОНЯТ ЛУЧШИЕ ПОСТАВЩИКИ НОВОСИБИРСКА</h1>
+                </div>
+        </div>
+      </div>
+      
+      
+      <div class="container">
+        <div class="row">
+            <!-- Новая заявка -->
+            <div class="col-sm-8 col-sm-offset-2 col-xs-11 col-xs-offset-1 field bordered">
+                <h3>Я ищу</h3>
+                <form class="form-horizontal" action="post">
+                    <div class="form-group">
+                        <div class="col-xs-11 col-xs-offset-1">
+                            <label class="control-label" >
+                            <input type="checkbox"> ЖБИ (фундаментальные блоки ФБСб плиты перекрытий ПК, перемычки)</label>
+                        </div>
+                        <div class="col-xs-11 col-xs-offset-1">
+                            <label class="control-label" >
+                            <input type="checkbox"> Кирпич / Газобетон / Брус </label>
+                        </div>
+                        <div class="col-xs-11 col-xs-offset-1">
+                            <label class="control-label" >
+                            <input type="checkbox"> Бетон / Раствор </label>
+                        </div>
+                        <div class="col-xs-11 col-xs-offset-1">
+                            <select name="region" class="marg limiter">
+                                <option>в Новосибирске и области</option>
+                                <option>в Свердловской области</option>
+                                <option>в Оренбурге и области</option>
+                                <option>в Иркутске</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <label class="col-xs-5 left"> Описание*</label>
+                            <textarea class="form-control col-xs-2" rows=2> </textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12 col-sm-6">
+                            <label class="control-label col-xs-12 col-sm-6" >Телефон*</label>
+                            <input type="text" class="input-md col-xs-12 col-sm-6"> 
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <label class="control-label col-xs-12 col-sm-6" >Имя</label>
+                            <input type="text" class="input-md col-xs-12 col-sm-6"> 
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-default text-uppercase bordered large ">Отправить</button>
+                    </div>
+                </form>
+                <br>
+                </div>
+          </div>
+        </div>
+      
+        {% include "_filter_requests.html" %}
+      
+        <div class="col-sm-offset-2">
+        {% for comment in range(comments) %}
+                {% include "_request.html" %}
+        {% endfor %}
+        </div>
+        {% include "_button_new.html" %}
 
-      <div class="starter-template">
-        <h1 class="page-name">Список статей</h1>
-        <hr>
-          
-          
+      <br>
+      
+      <div class="container comments">
+          <div id="myCarousel" class="col-xs-12 col-sm-8 col-sm-offset-2 carousel" data-ride="carousel">
+              <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                        <div class="col-xs-8 col-xs-offset-2 bordered">
+                            <p></p>
+                            <p><b>1Кирилл, 29 лет, г.Барабинск</b></p>
+                            <p>Бла-бла, мне помогло, все супер! Бла-бла, мне помогло, все супер! Бла-бла, мне помогло, все супер! Бла-бла, мне помогло, все супер! Бла-бла, мне помогло, все супер! </p>
+                        </div>
+                    </div>
 
-    </div><!-- /.container -->
+                    <div class="item">
+                        <div class="col-xs-8 col-xs-offset-2 bordered">
+                            <p></p>
+                            <p><b>2Кирилл, 23 лет, г.Барабинск</b></p>
+                            <p>ВСЕ СУПЕР КУПИЛ СЕБЕ, ЖЕНЕ, БАТЕ, БРАТУ ТЕЩЕ ПЕНОБЛОКОВ ГДЕ-ТО 1210 ШТУК НА РЫЛО СПАСИБО! </p>
+                        </div>
+                    </div>
 
+                    <div class="item">
+                        <div class="col-xs-8 col-xs-offset-2 bordered">
+                            <p></p>
+                            <p><b>Евгеха, 24 лет, г.Барабинск</b></p>
+                            <p>Ну ниче так </p>
+                        </div>
+                    </div>    
+                </div>
+        
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../static/js/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../static/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../static/js/ie10-viewport-bug-workaround.js"></script>
-  
-
-</body>
-</html>
+          <!-- Left and right controls -->
+              <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left gray" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right gray" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+        </div>
+        <div class="text-center comments">
+                    <button type="submit" class="top btn btn-default bot bordered">Оставить отзыв</button>
+        </div>
+         
+                
+        {% include "_footer.html" %}
+        {% endblock %}

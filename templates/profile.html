@@ -1,0 +1,40 @@
+    {% extends "_base.html" %}
+    {% block content %}
+    {% include "_nav_loginned.html" %}
+      
+    <div class="row">
+        <div class="col-sm-2 col-sm-offset-1">
+            <span class="glyphicon glyphicon-home logo"></span>
+        </div>
+        <div class="col-sm-5">
+            <a href="index.html">Главная </a> <span class="glyphicon glyphicon-chevron-right marg"></span> Личный кабинет
+            <h1>Личный кабинет</h1>
+        </div>
+        <div class="col-sm-3 col-sm-offset-1">
+            <a href="requests.html">Перейти к заявкам<span class="glyphicon glyphicon-chevron-right marg"></span></a>
+        </div>
+        
+    </div>
+      
+    <div class="tabbable tabs-left">
+      <ul class="col-sm-2 col-sm-offset-1 nav nav-tabs padding-top">
+        <li class="active bordered"><a href="#tab1" data-toggle="tab">Моя организация</a></li>
+        <li class="bordered"><a href="#tab2" data-toggle="tab">Смена пароля</a></li>
+        <li class="bordered"><a href="#tab3" data-toggle="tab">Моя рассылка</a></li>
+      </ul>
+      <div class="col-sm-8 col-xs-12 tab-content">
+        <div class="tab-pane active  margin-top" id="tab1">
+            <p class="top">Vivamus suscipit gravida risus non finibus. Etiam fringilla enim non sem aliquet, nec dignissim mi dapibus. Donec hendrerit elit non metus varius eleifend. Nam pharetra lacus eu diam tempor, tincidunt feugiat nisi vehicula. Maecenas non risus vitae diam dapibus aliquam at at tellus. Nunc vestibulum, risus ac consectetur dapibus, turpis eros condimentum enim, eu ornare tellus neque sit amet ex. Aliquam a sodales odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum sit amet vestibulum nisi. Praesent id elit in sapien interdum faucibus.
+            Vivamus suscipit gravida risus non finibus. Etiam fringilla enim non sem aliquet, nec dignissim mi dapibus. Donec hendrerit elit non metus varius eleifend. Nam pharetra lacus eu diam tempor, tincidunt feugiat nisi vehicula. Maecenas non risus vitae diam dapibus aliquam at at tellus. Nunc vestibulum, risus ac consectetur dapibus, turpis eros condimentum enim, eu ornare tellus neque sit amet ex. Aliquam a sodales odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum sit amet vestibulum nisi. Praesent id elit in sapien interdum faucibus.</p>
+        </div>
+        <div class="tab-pane fade  margin-top" id="tab2">
+            <p>Phasellus molestie, quam quis mollis porta, neque ipsum iaculis odio, rhoncus suscipit erat ipsum quis nunc. Sed tincidunt efficitur scelerisque. Donec sagittis leo malesuada feugiat tincidunt. Mauris et ex consectetur odio interdum varius. Aenean in purus nisl. Fusce ornare dui sed viverra aliquam. Aenean laoreet metus enim, in faucibus dui fermentum sit amet. Vivamus purus nisl, pulvinar id tellus id, vulputate euismod justo. Nulla bibendum sagittis convallis. Vivamus et leo orci. Sed porttitor nisl in libero porttitor, nec rhoncus nulla iaculis.
+            Vivamus suscipit gravida risus non finibus. Etiam fringilla enim non sem aliquet, nec dignissim mi dapibus. Donec hendrerit elit non metus varius eleifend. Nam pharetra lacus eu diam tempor, tincidunt feugiat nisi vehicula. Maecenas non risus vitae diam dapibus aliquam at at tellus. Nunc vestibulum, risus ac consectetur dapibus, turpis eros condimentum enim, eu ornare tellus neque sit amet ex. Aliquam a sodales odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum sit amet vestibulum nisi. Praesent id elit in sapien interdum faucibus.</p>
+        </div>
+        <div class="tab-pane fade margin-top" id="tab3">
+            <p>Phasellus dui lorem, ornare id libero ut, feugiat fermentum mi. Nulla sed posuere erat. Cras pellentesque semper velit vel efficitur. Maecenas volutpat leo sed arcu tincidunt, elementum dignissim magna gravida. Donec lorem velit, semper nec ultrices eget, pellentesque ut libero. Phasellus euismod enim ut imperdiet semper. Nunc ac euismod nulla. Suspendisse eros lacus, dictum sit amet mauris quis, elementum accumsan arcu. Aliquam finibus leo at molestie consequat. Duis a ultricies turpis. Integer imperdiet neque vel scelerisque consequat. In dignissim, orci a semper lacinia, ligula nulla imperdiet turpis, vitae sollicitudin mauris arcu eget quam. Sed et mollis purus.
+            Vivamus suscipit gravida risus non finibus. Etiam fringilla enim non sem aliquet, nec dignissim mi dapibus. Donec hendrerit elit non metus varius eleifend. Nam pharetra lacus eu diam tempor, tincidunt feugiat nisi vehicula. Maecenas non risus vitae diam dapibus aliquam at at tellus. Nunc vestibulum, risus ac consectetur dapibus, turpis eros condimentum enim, eu ornare tellus neque sit amet ex. Aliquam a sodales odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum sit amet vestibulum nisi. Praesent id elit in sapien interdum faucibus.</p>
+        </div>
+      </div>
+    </div>
+{% endblock %}
