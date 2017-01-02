@@ -4,18 +4,20 @@
 
     <span class="glyphicon glyphicon-home logo"></span>
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-                    <h1 class="page-name">Заявки</h1>
-                    <hr>
+        
+    </div>
+    <div class="container delere-right-mar delete-right-pad">
+        <div class="row delete-left-mar delete-right-mar">
+                {% include "_filter_requests.html" %}
+                <div class="col-sm-8 col-sm-offset-2 delete-right-mar">
                     {% for comment in range(comments) %}
+                        <hr>
                         {% include "_request.html" %}
                     {% endfor %}
-            </div>
-            <div class="text-center">{% include "_button_new.html" %}</div>
-            <div class="text-center">{% include "_pages.html" %}</div>
+                </div>
+            <br>
+                    {% include "_button_new.html" %}
+                </div>
         </div>
-    </div>
-    
     {% include "_footer.html" %}
     {% endblock %}

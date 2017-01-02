@@ -6,6 +6,8 @@ body {
 
 .row {
     width: 100%;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .navbar {
@@ -78,13 +80,13 @@ button.large, button.large:hover {
     height: 60px;
 }
 
-button.medium, button.medium:hover {
+.medium, button.medium:hover {
     border-radius: 25px;
 
 }
 
 .bordered {
-    border: 1px solid black;
+    border: 1px solid gray;
 }
 
 .limiter {
@@ -119,7 +121,6 @@ button.medium, button.medium:hover {
 .reg_top {
     padding-left: 20px;
     padding-top: 15px;
-    padding-top: 15px;
 }
 
 .delete-left-mar {
@@ -130,6 +131,10 @@ button.medium, button.medium:hover {
 .delete-right-mar {
     margin-right: -15px;
     padding-right: 0px;
+}
+
+.delete-right-pad {
+    padding-right: 0;
 }
 
 [data-notify="progressbar"] {

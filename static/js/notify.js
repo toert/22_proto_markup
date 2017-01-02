@@ -18,7 +18,10 @@ var notify = $.notify(
 		from: "top",
 		align: "left"
 	},
-	offset: 40,
+	offset: {
+    x: 20,
+    y: 50
+  },
 	spacing: 10,
 	z_index: 1031,
 	delay: 1000,

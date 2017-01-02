@@ -14,7 +14,7 @@
       </div>
       
       
-      <div class="container">
+      <div class="container delere-right-mar delete-right-pad">
         <div class="row">
             <!-- Новая заявка -->
             <div class="col-sm-8 col-sm-offset-2 col-xs-11 col-xs-offset-1 field bordered">
@@ -65,24 +65,26 @@
                 <br>
                 </div>
           </div>
+       
+          <div class="row delete-left-mar delete-right-mar">
+                {% include "_filter_requests.html" %}
+                
+                <div class="col-sm-8 col-sm-offset-2 delete-right-mar">
+                    {% for comment in range(comments) %}
+                        <hr>
+                        {% include "_request.html" %}
+                    {% endfor %}
+                </div>
+                    {% include "_button_new.html" %}
+                </div>
         </div>
-      
-        {% include "_filter_requests.html" %}
-      
-        <div class="col-sm-offset-2 col-sm-8 delete-right-mar">
-        {% for comment in range(comments) %}
-                {% include "_request.html" %}
-        {% endfor %}
-        </div>
-        {% include "_button_new.html" %}
-
       <br>
       
-      <div class="container comments">
+      <div class="container comments out-right out-left">
           <div id="myCarousel" class="col-xs-12 col-sm-8 col-sm-offset-2 carousel" data-ride="carousel">
               <div class="carousel-inner" role="listbox">
                   <div class="item active">
-                        <div class="col-xs-8 col-xs-offset-2 bordered">
+                        <div class="col-xs-8 col-xs-offset-2 bordered medium">
                             <p></p>
                             <p><b>1Кирилл, 29 лет, г.Барабинск</b></p>
                             <p>Бла-бла, мне помогло, все супер! Бла-бла, мне помогло, все супер! Бла-бла, мне помогло, все супер! Бла-бла, мне помогло, все супер! Бла-бла, мне помогло, все супер! </p>
@@ -90,7 +92,7 @@
                     </div>
 
                     <div class="item">
-                        <div class="col-xs-8 col-xs-offset-2 bordered">
+                        <div class="col-xs-8 col-xs-offset-2 bordered medium">
                             <p></p>
                             <p><b>2Кирилл, 23 лет, г.Барабинск</b></p>
                             <p>ВСЕ СУПЕР КУПИЛ СЕБЕ, ЖЕНЕ, БАТЕ, БРАТУ ТЕЩЕ ПЕНОБЛОКОВ ГДЕ-ТО 1210 ШТУК НА РЫЛО СПАСИБО! </p>
@@ -98,7 +100,7 @@
                     </div>
 
                     <div class="item">
-                        <div class="col-xs-8 col-xs-offset-2 bordered">
+                        <div class="col-xs-8 col-xs-offset-2 bordered medium">
                             <p></p>
                             <p><b>Евгеха, 24 лет, г.Барабинск</b></p>
                             <p>Ну ниче так </p>
