@@ -20,12 +20,18 @@
     
  <nav class="navbar navbar-default">
         <div id="navbar" class="container-fluid">
-                <select name="region" class="marg">
-                    <option>Новосибирск</option>
-                    <option>Новосибирская область</option>
-                    <option>Оренбург и область</option>
-                    <option>Иркутск</option>
-            </select>
+            
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="region">Регион: Новосибирск и область
+                                        <span class="caret"></span>
+                                    </a>
+                
+                                    <ul class="dropdown-menu">
+                                            <li><a href="#nsk">Новосибирск и область</a></li>
+                                            <li><a href="#ekb">Cвердловская область</a></li>
+                                            <li><a href="#orn">Оренбург и область</a></li>
+                                            <li><a href="#irk">Иркутск</a></li>
+                                    </ul>
+                                
             <ul class="nav navbar-nav navbar-right">
                 <li class="reg"><a href="#"><span class="glyphicon glyphicon-user"></span> Зарегистрироваться</a></li>
                 <li class="login"><a href="profile.html"><span class="glyphicon glyphicon-log-in"></span> Войти</a></li>
@@ -248,10 +254,16 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script>
+        
+      </script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="../static/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../static/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../static/js/bootstrap-notify.min.js"></script>
+    <script src="../static/js/notify.js"></script>
   
 
 </body>
