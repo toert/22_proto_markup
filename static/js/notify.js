@@ -1,5 +1,5 @@
 
-var notify = $.notify(
+if(document.URL.indexOf("index.html") >= 0) { var notify = $.notify(
 {
 	// options
 	icon: 'glyphicon glyphicon-map-marker',
@@ -52,6 +52,7 @@ var notify = $.notify(
 		'<a href="{3}" target="{4}" data-notify="url"></a>' +
 	'</div>' 
 });
+                                              };
 
 $( "#yes_btn" ).click(function() {
   notify.close();

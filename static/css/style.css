@@ -4,6 +4,10 @@ body {
     width: 100%;
 }
 
+.lim-100 {
+    max-width: 100%;
+}
+
 .row {
     width: 100%;
     padding-left: 0;
@@ -55,7 +59,7 @@ body {
 /* body  */
 
 .logo {
-    margin-left: 15px;
+    
     font-size: 300%;
 }
 
